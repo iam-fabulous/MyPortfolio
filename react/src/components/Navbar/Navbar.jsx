@@ -21,7 +21,7 @@ const NavMenu = [
 const Navbar = () => {
   return (
     <>
-        <div className= 'py-5 bg-gray-600 text-white'>
+        <div className= 'py-5 bg-gray-600 text-white pr-15 pl-15'>
         <div className='container flex justify-between items-center'>
             {/* {logo section} */} 
             <div>
