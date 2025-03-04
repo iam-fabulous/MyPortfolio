@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../../assets/logo-emoji.png'
+import {GiHamburgerMenu} from 'react-icons/gi'
 
 const NavMenu = [
     {
@@ -25,21 +26,25 @@ const Navbar = () => {
         <div className='container flex justify-between items-center'>
             {/* {logo section} */} 
             <div>
-                <img src={logo} alt="" className='w-16' />
+                <img src={logo} alt="" className='w-[80px]' />
             </div>
             {/* Nav Menu Section */}
             <div>
-                <ul className='flex justify-center gap-5'>
+                <ul className='hidden md:flex justify-center gap-10'>
                     {
                         NavMenu.map((item) => {
                             return (
                                 <li key={item.id}>
-                                    <a href={item.url}>{item.name}</a>
+                                    <a href={item.url} className='hover:text-amber-300 text-xl font-semibold text-white/70 duration-300'>{item.name}</a>
                                 </li>
                             );
                         })
                     }
                 </ul>
+                {/* mobile hamburger menu */}
+                <div className='md:hidden'>
+                    <GiHamburgerMenu className='text-3xl'/>
+                </div>
             </div>
         </div>
         </div>
